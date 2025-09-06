@@ -33,7 +33,7 @@ st.markdown(CHAT_BUBBLE_CSS, unsafe_allow_html=True)
 # Sidebar (Settings)
 # -------------------------------
 st.sidebar.title("⚙️ 설정")
-openai_api_key = st.sidebar.text_input("OpenAI API 키", type="password")
+openai_api_key = st.secrets['openai']['API_KEY']
 model = st.sidebar.selectbox("모델 선택", ["gpt-4o-mini", "gpt-4o", "gpt-4.1-mini"], index=0)
 temperature = st.sidebar.slider("창의성(temperature)", 0.0, 1.2, 0.6, 0.1)
 
